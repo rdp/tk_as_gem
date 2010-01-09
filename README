@@ -1,0 +1,4 @@
+the tk extension extracted from core and gem-ified
+gem install tk_as_gem
+
+originally extracted from 1.9.1p376 with a minor change to make it work with mingw
