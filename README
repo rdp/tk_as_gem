@@ -1,4 +1,22 @@
 the tk extension extracted from core and gem-ified
 gem install tk_as_gem
 
-originally extracted from 1.9.1p376 with a minor change to make it work with mingw
+originally extracted from 1.9.1p376, then added a minor change to make it work with mingw/msys.
+
+To install into an existing mingw distro:
+install ActiveTcl [c:\tcl] (should add itself to the path)
+C:>gem install tk_as_gem
+
+Note: ruby.exe and your tcl dir must be on the same drive.
+
+Should install for linux, as well, I think (1.9+).
+
+Note that this only works for 1.9 -- for 1.8 mingw you can install some binaries from here:
+http://github.com/rdp/ruby_windows_tk
+
+
+Bugs:
+
+currently it appears to require a ctrl+c to exit out of ruby, once you've done a
+require 'tk'
+of the gem.
