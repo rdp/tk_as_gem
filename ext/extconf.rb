@@ -151,8 +151,6 @@ def find_tcl(tcllib, stubs, version, *opt_paths)
   unless st
     puts("Warning:: cannot find Tcl library. tcltklib will not be compiled (tcltklib is disabled on your Ruby == Ruby/Tk will not work). Please check configure options.")
   end
-  require 'display'
-  display st
   st
 end
 
