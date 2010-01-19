@@ -9,14 +9,13 @@ C:>gem install tk_as_gem
 
 Note: ruby.exe and your tcl dir must be on the same drive.
 
-Should install for linux, as well, I think (1.9+).
+Might install for linux, as well.
 
 Note that this only works for 1.9 -- for 1.8 mingw you can install some binaries from here:
 http://github.com/rdp/ruby_windows_tk
 
-
 Bugs:
 
-currently it appears to require a ctrl+c to exit out of ruby, once you've done a
+currently to exit out of ruby, once you've done a
 require 'tk'
-of the gem.
+of the gem, you must *first* close all outstanding open Tk windows, THEN exit your ruby process, otherwise it will hang.
