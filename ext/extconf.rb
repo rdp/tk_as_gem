@@ -440,7 +440,9 @@ if ( tcltk_framework ||
     # ughly.
     if RUBY_PLATFORM =~ /mingw/
       old = File.read('Makefile')
-      old.gsub!('/Tcl', File.expand_path('/Tcl'))
+#      old.gsub!('/Tcl', File.expand_path('/Tcl'))
+      old.gsub!('-I/', "-I#{File.expand_path('/')}")
+      old.gsub!('-L/', "-L#{File.expand_path('/')}")
       File.open('Makefile', 'w') do |f| f.write old; end
     end
     
