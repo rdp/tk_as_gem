@@ -19,3 +19,5 @@ Bugs:
 currently to exit out of ruby, once you've done a
 require 'tk'
 of the gem, you must *first* close all outstanding open Tk windows, THEN exit your ruby process, otherwise it will hang.
+
+Also you "might" need Tcl/Tk 8.4 instead of 8.5 (you certaintly do, for 1.8)
